@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noções de Mecânica Básica para Mulheres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .progress {
+            text-align: center;
+            padding: 10px;
+            background-color: #ddd;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            max-width: 900px;
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        .content h2 {
+            color: #333;
+        }
+        .content p, .content ul {
+            line-height: 1.6;
+            color: #555;
+        }
+        .content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .nav-buttons button:disabled {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Noções de Mecânica Básica para Mulheres</h1>
+    </div>
+
+    <div class="progress" id="progress">Progresso: 1 / 9</div>
+
+    <div class="content active" id="page-1">
+        <h2>1. Introdução à Mecânica Básica</h2>
+        <p>Este curso foi desenvolvido para ajudar mulheres que não têm conhecimento prévio sobre mecânica.</p>
+    </div>
+
+    <div class="content" id="page-2">
+        <h2>2. O Motor e Seus Componentes</h2>
+        <p>O motor transforma combustível em energia para movimentar o veículo.</p>
+    </div>
+
+    <div class="content" id="page-3">
+        <h2>3. Sistema de Transmissão</h2>
+        <p>A transmissão transfere a potência do motor para as rodas.</p>
+    </div>
+
+    <div class="content" id="page-4">
+        <h2>4. Freios e Segurança</h2>
+        <p>Os freios são fundamentais para a segurança do veículo.</p>
+    </div>
+
+    <div class="content" id="page-5">
+        <h2>5. Suspensão e Pneus</h2>
+        <p>A suspensão mantém a estabilidade do carro e os pneus garantem a aderência.</p>
+    </div>
+
+    <div class="content" id="page-6">
+        <h2>6. Sistema Elétrico e Bateria</h2>
+        <p>O sistema elétrico é responsável pelo funcionamento de vários componentes do veículo.</p>
+    </div>
+
+    <div class="content" id="page-7">
+        <h2>7. Manutenção Preventiva</h2>
+        <p>A manutenção preventiva evita problemas e melhora a durabilidade do veículo.</p>
+    </div>
+
+    <div class="content" id="page-8">
+        <h2>8. Emergências e Soluções Rápidas</h2>
+        <p>O que fazer em caso de pane ou pneu furado?</p>
+    </div>
+
+    <div class="content" id="page-9">
+        <h2>Avaliação Final</h2>
+        <form id="quiz-form">
+            <p>1. Qual a principal função do motor?</p>
+            <input type="radio" name="q1" value="errado"> Acelerar o carro <br>
+            <input type="radio" name="q1" value="certo"> Transformar combustível em energia <br>
+
+            <p>2. O que indica a necessidade de troca de pastilhas de freio?</p>
+            <input type="radio" name="q2" value="certo"> Ruído metálico ao frear <br>
+            <input type="radio" name="q2" value="errado"> Volante tremendo <br>
+
+            <p>3. Qual item faz parte do sistema elétrico?</p>
+            <input type="radio" name="q3" value="errado"> Pistão <br>
+            <input type="radio" name="q3" value="certo"> Alternador <br>
+
+            <p>4. O que acontece se a correia dentada quebrar?</p>
+            <input type="radio" name="q4" value="errado"> O carro gasta mais combustível <br>
+            <input type="radio" name="q4" value="certo"> O motor pode ser danificado <br>
+
+            <p>5. Como saber se a bateria está fraca?</p>
+            <input type="radio" name="q5" value="errado"> Pneus murchos <br>
+            <input type="radio" name="q5" value="certo"> Dificuldade para ligar o carro <br>
+
+            <p>6. Quando calibrar os pneus?</p>
+            <input type="radio" name="q6" value="certo"> A cada 15 dias <br>
+            <input type="radio" name="q6" value="errado"> Apenas quando furar <br>
+
+            <p>7. Como evitar desgaste prematuro da embreagem?</p>
+            <input type="radio" name="q7" value="errado"> Acelerando forte sempre <br>
+            <input type="radio" name="q7" value="certo"> Não descansando o pé na embreagem <br>
+
+            <p>8. O que fazer ao furar um pneu?</p>
+            <input type="radio" name="q8" value="errado"> Continuar dirigindo devagar <br>
+            <input type="radio" name="q8" value="certo"> Trocar o pneu imediatamente <br>
+
+            <p>9. Qual fluido precisa ser trocado regularmente?</p>
+            <input type="radio" name="q9" value="certo"> Óleo do motor <br>
+            <input type="radio" name="q9" value="errado"> Água do radiador <br>
+
+            <p>10. O que fazer se a luz do freio acender no painel?</p>
+            <input type="radio" name="q10" value="certo"> Verificar as pastilhas de freio <br>
+            <input type="radio" name="q10" value="errado"> Ignorar se o carro estiver funcionando <br>
+
+            <br>
+            <button type="button" onclick="checkQuiz()">Ver Resultado</button>
+        </form>
+        <p id="quiz-result"></p>
+    </div>
+
+    <div class="nav-buttons">
+        <button id="prev-btn" onclick="changePage(-1)" disabled>Anterior</button>
+        <button id="next-btn" onclick="changePage(1)">Próximo</button>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        function changePage(direction) {
+            document.getElementById(`page-${currentPage}`).classList.remove('active');
+            currentPage += direction;
+            document.getElementById(`page-${currentPage}`).classList.add('active');
+            document.getElementById('progress').innerText = `Progresso: ${currentPage} / 9`;
+        }
+        
+        function checkQuiz() {
+            let correct = document.querySelectorAll('input[value="certo"]:checked').length;
+            document.getElementById("quiz-result").innerText = `Você acertou ${correct} de 10 questões!`;
+        }
+    </script>
+
+</body>
+</html>
