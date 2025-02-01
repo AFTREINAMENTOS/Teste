@@ -172,48 +172,6 @@
         <img src="https://via.placeholder.com/800x400?text=Luz+de+Airbag" alt="Luz de Airbag">
     </div>
 
-    <!-- Página 11 - Avaliação -->
-    <div class="content" id="page-11">
-        <h2>Avaliação Final</h2>
-        <form id="quiz-form">
-            <p>1. O que significa a luz de "Check Engine"?</p>
-            <input type="radio" name="q1" value="certo"> Problema no motor ou no sistema de emissões <br>
-            <input type="radio" name="q1" value="errado"> Problema no sistema de direção <br>
-
-            <p>2. O que indica a luz de óleo acesa?</p>
-            <input type="radio" name="q2" value="certo"> Nível de óleo baixo <br>
-            <input type="radio" name="q2" value="errado"> Problema na suspensão <br>
-
-            <p>3. O que significa a luz de temperatura acesa?</p>
-            <input type="radio" name="q3" value="certo"> Motor superaquecendo <br>
-            <input type="radio" name="q3" value="errado"> Nível baixo de fluido de direção <br>
-
-            <p>4. O que acontece se a luz de freio acender?</p>
-            <input type="radio" name="q4" value="certo"> Pode indicar problemas no sistema de freios <br>
-            <input type="radio" name="q4" value="errado"> O carro pode ter um desempenho melhor <br>
-
-            <p>5. O que significa a luz de ABS acesa?</p>
-            <input type="radio" name="q5" value="certo"> Falha no sistema de antibloqueio de rodas <br>
-            <input type="radio" name="q5" value="errado"> Aumento da potência do motor <br>
-
-            <p>6. O que indica a luz do cinto de segurança?</p>
-            <input type="radio" name="q6" value="certo"> O motorista ou passageiro não está usando o cinto de segurança <br>
-            <input type="radio" name="q6" value="errado"> O cinto de segurança está com defeito <br>
-
-            <p>7. O que acontece quando a luz de direção hidráulica acende?</p>
-            <input type="radio" name="q7" value="certo"> Pode haver falha no sistema de direção assistida <br>
-            <input type="radio" name="q7" value="errado"> O carro está com falta de combustível <br>
-
-            <p>8. O que significa a luz do airbag acesa?</p>
-            <input type="radio" name="q8" value="certo"> Falha no sistema de airbag <br>
-            <input type="radio" name="q8" value="errado"> Problema no sistema de iluminação <br>
-
-            <br><br>
-            <button type="button" onclick="submitQuiz()">Finalizar Avaliação</button>
-        </form>
-        <div id="feedback"></div>
-    </div>
-
     <div class="nav-buttons">
         <button id="prev-btn" onclick="changePage(-1)" disabled>Anterior</button>
         <button id="next-btn" onclick="changePage(1)">Próximo</button>
@@ -223,7 +181,7 @@
 
     <script>
         let currentPage = 1;
-        const totalPages = 11;
+        const totalPages = 10;
 
         function changePage(direction) {
             document.getElementById(`page-${currentPage}`).classList.remove('active');
@@ -244,19 +202,6 @@
             if (currentPage === totalPages) {
                 document.getElementById('certificado-btn').style.display = 'block';
             }
-        }
-
-        function submitQuiz() {
-            const form = document.getElementById('quiz-form');
-            const formData = new FormData(form);
-            let score = 0;
-            formData.forEach((value, key) => {
-                if (value === 'certo') {
-                    score++;
-                }
-            });
-            const feedback = document.getElementById('feedback');
-            feedback.innerHTML = `Você acertou ${score} de 8 questões.`;
         }
 
         updateNavigation();
