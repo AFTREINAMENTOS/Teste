@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Identificação de Luzes de Painel do Veículo</title>
+    <title>Noções de Mecânica Básica para Mulheres</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,7 +23,7 @@
         }
         .progress-bar {
             height: 10px;
-            width: 10%;
+            width: 12.5%;
             background-color: #4caf50;
             transition: width 0.3s;
         }
@@ -61,76 +61,92 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-        .question {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .feedback {
+        .dica-pratica {
+            background-color: #ffffcc;
+            padding: 10px;
+            border-left: 5px solid #ffcc00;
             margin-top: 10px;
-            font-weight: bold;
+        }
+        .quiz {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f4ff;
+            border-left: 5px solid #0099ff;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Identificação de Luzes de Painel do Veículo</h1>
+        <h1>Noções de Mecânica Básica para Mulheres</h1>
     </div>
 
     <div class="progress-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
 
-    <!-- Página 1 -->
+    <!-- Páginas do curso -->
     <div class="content active" id="page-1">
-        <h2>1. Introdução às Luzes de Painel</h2>
-        <p>As luzes de painel do carro são sinais importantes que informam ao motorista sobre o funcionamento do veículo.</p>
-        <img src="cores-das-luzes-do-painel.png" alt="Introdução às luzes de painel">
-        
-        <div class="question">O que as luzes do painel indicam?</div>
-        <input type="radio" name="q1" onclick="showFeedback(this, 'Correto! Elas informam o motorista sobre o funcionamento do veículo.')" > Informações sobre o funcionamento do veículo <br>
-        <input type="radio" name="q1" onclick="showFeedback(this, 'Errado. Elas não indicam a cor do carro.')" > A cor do carro <br>
-        <input type="radio" name="q1" onclick="showFeedback(this, 'Errado. Elas não indicam a pressão dos pneus.')" > A pressão dos pneus <br>
-        <div class="feedback"></div>
+        <h2>1. Introdução à Mecânica Básica</h2>
+        <p>Conhecer um pouco de mecânica básica ajuda a evitar problemas inesperados e a cuidar melhor do seu veículo.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Sempre leia o manual do carro para entender suas especificações.</p>
     </div>
 
-    <!-- Página 2 -->
     <div class="content" id="page-2">
-        <h2>2. Luz do Motor (Check Engine)</h2>
-        <p>Quando essa luz acende, pode indicar um problema no motor ou no sistema de emissões.</p>
-        <img src="Check_Engine.jpg" alt="Luz do motor">
-        
-        <div class="question">O que significa a luz "Check Engine" acesa?</div>
-        <input type="radio" name="q2" onclick="showFeedback(this, 'Correto! Pode indicar um problema no motor ou no sistema de emissões.')" > Problema no motor ou sistema de emissões <br>
-        <input type="radio" name="q2" onclick="showFeedback(this, 'Errado. Não tem relação com o freio de mão.')" > Freio de mão ativado <br>
-        <input type="radio" name="q2" onclick="showFeedback(this, 'Errado. Não tem relação com o cinto de segurança.')" > Falha no cinto de segurança <br>
-        <div class="feedback"></div>
+        <h2>2. Luzes do Painel</h2>
+        <p>As luzes do painel indicam o funcionamento e possíveis falhas do veículo. É importante saber o significado de cada uma.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Se uma luz acender e você não souber o que significa, consulte o manual ou um mecânico.</p>
     </div>
 
-    <!-- Página 3 -->
     <div class="content" id="page-3">
-        <h2>3. Luz de Óleo</h2>
-        <p>A luz de óleo acende quando o nível de óleo do motor está baixo ou quando a pressão do óleo está insuficiente.</p>
-        <img src="Luz_de_oleo.png" alt="Luz de óleo">
-        
-        <div class="question">O que fazer se a luz de óleo acender?</div>
-        <input type="radio" name="q3" onclick="showFeedback(this, 'Correto! O ideal é parar o veículo e verificar o nível de óleo.')" > Parar e verificar o nível de óleo <br>
-        <input type="radio" name="q3" onclick="showFeedback(this, 'Errado. Não é seguro continuar dirigindo normalmente.')" > Ignorar e continuar dirigindo <br>
-        <input type="radio" name="q3" onclick="showFeedback(this, 'Errado. A luz de óleo não indica problema nos freios.')" > Revisar o sistema de freios <br>
-        <div class="feedback"></div>
+        <h2>3. Verificação do Óleo</h2>
+        <p>O óleo lubrifica o motor e evita desgaste prematuro. É essencial conferir o nível regularmente.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Sempre verifique o óleo com o motor frio e o carro nivelado.</p>
     </div>
 
-    <!-- Página 4 -->
     <div class="content" id="page-4">
-        <h2>4. Luz de Temperatura do Motor</h2>
-        <p>Se essa luz acender, significa que o motor está superaquecendo.</p>
-        <img src="Luz_temperatura.jpeg" alt="Luz de temperatura do motor">
-        
-        <div class="question">O que pode causar o superaquecimento do motor?</div>
-        <input type="radio" name="q4" onclick="showFeedback(this, 'Correto! Falta de líquido de arrefecimento pode causar superaquecimento.')" > Falta de líquido de arrefecimento <br>
-        <input type="radio" name="q4" onclick="showFeedback(this, 'Errado. O cinto de segurança não tem relação com isso.')" > Cinto de segurança mal colocado <br>
-        <input type="radio" name="q4" onclick="showFeedback(this, 'Errado. O rádio não influencia na temperatura do motor.')" > Volume alto do rádio <br>
-        <div class="feedback"></div>
+        <h2>4. Manutenção dos Pneus</h2>
+        <p>Pneus calibrados corretamente garantem mais segurança e economia de combustível.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Verifique a calibragem dos pneus pelo menos a cada 15 dias.</p>
+    </div>
+
+    <div class="content" id="page-5">
+        <h2>5. Água do Radiador</h2>
+        <p>O sistema de arrefecimento impede o superaquecimento do motor. Sempre confira o nível de água no reservatório.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Nunca abra o reservatório com o motor quente!</p>
+    </div>
+
+    <div class="content" id="page-6">
+        <h2>6. Sistema de Freios</h2>
+        <p>Freios em bom estado são fundamentais para a segurança. Ruídos ou pedal baixo podem indicar problemas.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Se notar qualquer alteração na resposta do freio, procure um mecânico imediatamente.</p>
+    </div>
+
+    <div class="content" id="page-7">
+        <h2>7. Bateria do Veículo</h2>
+        <p>A bateria fornece energia para o motor de arranque e outros sistemas elétricos do carro.</p>
+        <p class="dica-pratica"><strong>Dica Prática:</strong> Evite deixar faróis ou rádio ligados com o carro desligado, pois isso pode descarregar a bateria.</p>
+    </div>
+
+    <div class="content" id="page-8">
+        <h2>8. Avaliação Final</h2>
+        <p>Responda às perguntas para testar seus conhecimentos.</p>
+
+        <div class="quiz">
+            <p><strong>1. Para que serve o óleo do motor?</strong></p>
+            <input type="radio" name="q1" onclick="verificarResposta(this, 'errado')"> Para esfriar o motor.<br>
+            <input type="radio" name="q1" onclick="verificarResposta(this, 'certo')"> Para lubrificar e reduzir o desgaste das peças.<br>
+            <input type="radio" name="q1" onclick="verificarResposta(this, 'errado')"> Para limpar o motor.<br>
+            <p id="feedback-q1"></p>
+        </div>
+
+        <div class="quiz">
+            <p><strong>2. O que fazer se a luz do óleo acender no painel?</strong></p>
+            <input type="radio" name="q2" onclick="verificarResposta(this, 'certo')"> Parar o carro e verificar o nível do óleo.<br>
+            <input type="radio" name="q2" onclick="verificarResposta(this, 'errado')"> Continuar dirigindo normalmente.<br>
+            <input type="radio" name="q2" onclick="verificarResposta(this, 'errado')"> Acelerar para ver se a luz apaga.<br>
+            <p id="feedback-q2"></p>
+        </div>
     </div>
 
     <div class="nav-buttons">
@@ -140,7 +156,7 @@
 
     <script>
         let currentPage = 1;
-        const totalPages = 4; // Ajustar conforme novas páginas
+        const totalPages = 8;
 
         function changePage(direction) {
             document.getElementById(`page-${currentPage}`).classList.remove('active');
@@ -160,9 +176,10 @@
             document.getElementById('progress-bar').style.width = `${progress}%`;
         }
 
-        function showFeedback(element, message) {
-            const feedback = element.parentElement.querySelector('.feedback');
-            feedback.innerHTML = message;
+        function verificarResposta(element, status) {
+            let feedback = document.getElementById(`feedback-${element.name}`);
+            feedback.style.color = status === 'certo' ? 'green' : 'red';
+            feedback.innerHTML = status === 'certo' ? "✔ Resposta correta!" : "✖ Resposta incorreta!";
         }
 
         updateNavigation();
