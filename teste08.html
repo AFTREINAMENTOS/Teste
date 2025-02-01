@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noções de Mecânica Básica para Mulheres</title>
+    <title>Identificação de Luzes de Painel do Veículo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,15 +15,17 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .progress {
-            text-align: center;
             padding: 10px;
+        }
+        .progress-container {
+            width: 100%;
             background-color: #ddd;
+        }
+        .progress-bar {
+            height: 10px;
+            width: 10%;
+            background-color: #4caf50;
+            transition: width 0.3s;
         }
         .content {
             padding: 20px;
@@ -36,21 +38,11 @@
         .content.active {
             display: block;
         }
-        .content h2 {
-            color: #333;
-        }
-        .content p, .content ul {
-            line-height: 1.6;
-            color: #555;
-        }
-        .content ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
         .nav-buttons {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
+            padding: 10px;
         }
         .nav-buttons button {
             padding: 10px 20px;
@@ -63,103 +55,82 @@
         .nav-buttons button:disabled {
             background-color: #ccc;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .question {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Noções de Mecânica Básica para Mulheres</h1>
+        <h1>Identificação de Luzes de Painel do Veículo</h1>
     </div>
 
-    <div class="progress" id="progress">Progresso: 1 / 9</div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
 
+    <!-- Página 1 -->
     <div class="content active" id="page-1">
-        <h2>1. Introdução à Mecânica Básica</h2>
-        <p>Este curso foi desenvolvido para ajudar mulheres que não têm conhecimento prévio sobre mecânica.</p>
+        <h2>1. Introdução às Luzes de Painel</h2>
+        <p>As luzes de painel do carro são sinais importantes que informam ao motorista sobre o funcionamento do veículo.</p>
+        <img src="cores-das-luzes-do-painel.png" alt="Introdução às luzes de painel">
+        
+        <div class="question">O que as luzes do painel indicam?</div>
+        <input type="radio" name="q1" onclick="showFeedback(this, 'Correto! Elas informam o motorista sobre o funcionamento do veículo.')" > Informações sobre o funcionamento do veículo <br>
+        <input type="radio" name="q1" onclick="showFeedback(this, 'Errado. Elas não indicam a cor do carro.')" > A cor do carro <br>
+        <input type="radio" name="q1" onclick="showFeedback(this, 'Errado. Elas não indicam a pressão dos pneus.')" > A pressão dos pneus <br>
+        <div class="feedback"></div>
     </div>
 
+    <!-- Página 2 -->
     <div class="content" id="page-2">
-        <h2>2. O Motor e Seus Componentes</h2>
-        <p>O motor transforma combustível em energia para movimentar o veículo.</p>
+        <h2>2. Luz do Motor (Check Engine)</h2>
+        <p>Quando essa luz acende, pode indicar um problema no motor ou no sistema de emissões.</p>
+        <img src="Check_Engine.jpg" alt="Luz do motor">
+        
+        <div class="question">O que significa a luz "Check Engine" acesa?</div>
+        <input type="radio" name="q2" onclick="showFeedback(this, 'Correto! Pode indicar um problema no motor ou no sistema de emissões.')" > Problema no motor ou sistema de emissões <br>
+        <input type="radio" name="q2" onclick="showFeedback(this, 'Errado. Não tem relação com o freio de mão.')" > Freio de mão ativado <br>
+        <input type="radio" name="q2" onclick="showFeedback(this, 'Errado. Não tem relação com o cinto de segurança.')" > Falha no cinto de segurança <br>
+        <div class="feedback"></div>
     </div>
 
+    <!-- Página 3 -->
     <div class="content" id="page-3">
-        <h2>3. Sistema de Transmissão</h2>
-        <p>A transmissão transfere a potência do motor para as rodas.</p>
+        <h2>3. Luz de Óleo</h2>
+        <p>A luz de óleo acende quando o nível de óleo do motor está baixo ou quando a pressão do óleo está insuficiente.</p>
+        <img src="Luz_de_oleo.png" alt="Luz de óleo">
+        
+        <div class="question">O que fazer se a luz de óleo acender?</div>
+        <input type="radio" name="q3" onclick="showFeedback(this, 'Correto! O ideal é parar o veículo e verificar o nível de óleo.')" > Parar e verificar o nível de óleo <br>
+        <input type="radio" name="q3" onclick="showFeedback(this, 'Errado. Não é seguro continuar dirigindo normalmente.')" > Ignorar e continuar dirigindo <br>
+        <input type="radio" name="q3" onclick="showFeedback(this, 'Errado. A luz de óleo não indica problema nos freios.')" > Revisar o sistema de freios <br>
+        <div class="feedback"></div>
     </div>
 
+    <!-- Página 4 -->
     <div class="content" id="page-4">
-        <h2>4. Freios e Segurança</h2>
-        <p>Os freios são fundamentais para a segurança do veículo.</p>
-    </div>
-
-    <div class="content" id="page-5">
-        <h2>5. Suspensão e Pneus</h2>
-        <p>A suspensão mantém a estabilidade do carro e os pneus garantem a aderência.</p>
-    </div>
-
-    <div class="content" id="page-6">
-        <h2>6. Sistema Elétrico e Bateria</h2>
-        <p>O sistema elétrico é responsável pelo funcionamento de vários componentes do veículo.</p>
-    </div>
-
-    <div class="content" id="page-7">
-        <h2>7. Manutenção Preventiva</h2>
-        <p>A manutenção preventiva evita problemas e melhora a durabilidade do veículo.</p>
-    </div>
-
-    <div class="content" id="page-8">
-        <h2>8. Emergências e Soluções Rápidas</h2>
-        <p>O que fazer em caso de pane ou pneu furado?</p>
-    </div>
-
-    <div class="content" id="page-9">
-        <h2>Avaliação Final</h2>
-        <form id="quiz-form">
-            <p>1. Qual a principal função do motor?</p>
-            <input type="radio" name="q1" value="errado"> Acelerar o carro <br>
-            <input type="radio" name="q1" value="certo"> Transformar combustível em energia <br>
-
-            <p>2. O que indica a necessidade de troca de pastilhas de freio?</p>
-            <input type="radio" name="q2" value="certo"> Ruído metálico ao frear <br>
-            <input type="radio" name="q2" value="errado"> Volante tremendo <br>
-
-            <p>3. Qual item faz parte do sistema elétrico?</p>
-            <input type="radio" name="q3" value="errado"> Pistão <br>
-            <input type="radio" name="q3" value="certo"> Alternador <br>
-
-            <p>4. O que acontece se a correia dentada quebrar?</p>
-            <input type="radio" name="q4" value="errado"> O carro gasta mais combustível <br>
-            <input type="radio" name="q4" value="certo"> O motor pode ser danificado <br>
-
-            <p>5. Como saber se a bateria está fraca?</p>
-            <input type="radio" name="q5" value="errado"> Pneus murchos <br>
-            <input type="radio" name="q5" value="certo"> Dificuldade para ligar o carro <br>
-
-            <p>6. Quando calibrar os pneus?</p>
-            <input type="radio" name="q6" value="certo"> A cada 15 dias <br>
-            <input type="radio" name="q6" value="errado"> Apenas quando furar <br>
-
-            <p>7. Como evitar desgaste prematuro da embreagem?</p>
-            <input type="radio" name="q7" value="errado"> Acelerando forte sempre <br>
-            <input type="radio" name="q7" value="certo"> Não descansando o pé na embreagem <br>
-
-            <p>8. O que fazer ao furar um pneu?</p>
-            <input type="radio" name="q8" value="errado"> Continuar dirigindo devagar <br>
-            <input type="radio" name="q8" value="certo"> Trocar o pneu imediatamente <br>
-
-            <p>9. Qual fluido precisa ser trocado regularmente?</p>
-            <input type="radio" name="q9" value="certo"> Óleo do motor <br>
-            <input type="radio" name="q9" value="errado"> Água do radiador <br>
-
-            <p>10. O que fazer se a luz do freio acender no painel?</p>
-            <input type="radio" name="q10" value="certo"> Verificar as pastilhas de freio <br>
-            <input type="radio" name="q10" value="errado"> Ignorar se o carro estiver funcionando <br>
-
-            <br>
-            <button type="button" onclick="checkQuiz()">Ver Resultado</button>
-        </form>
-        <p id="quiz-result"></p>
+        <h2>4. Luz de Temperatura do Motor</h2>
+        <p>Se essa luz acender, significa que o motor está superaquecendo.</p>
+        <img src="Luz_temperatura.jpeg" alt="Luz de temperatura do motor">
+        
+        <div class="question">O que pode causar o superaquecimento do motor?</div>
+        <input type="radio" name="q4" onclick="showFeedback(this, 'Correto! Falta de líquido de arrefecimento pode causar superaquecimento.')" > Falta de líquido de arrefecimento <br>
+        <input type="radio" name="q4" onclick="showFeedback(this, 'Errado. O cinto de segurança não tem relação com isso.')" > Cinto de segurança mal colocado <br>
+        <input type="radio" name="q4" onclick="showFeedback(this, 'Errado. O rádio não influencia na temperatura do motor.')" > Volume alto do rádio <br>
+        <div class="feedback"></div>
     </div>
 
     <div class="nav-buttons">
@@ -169,18 +140,33 @@
 
     <script>
         let currentPage = 1;
+        const totalPages = 4; // Ajustar conforme novas páginas
+
         function changePage(direction) {
             document.getElementById(`page-${currentPage}`).classList.remove('active');
             currentPage += direction;
             document.getElementById(`page-${currentPage}`).classList.add('active');
-            document.getElementById('progress').innerText = `Progresso: ${currentPage} / 9`;
+            updateNavigation();
+            updateProgressBar();
         }
-        
-        function checkQuiz() {
-            let correct = document.querySelectorAll('input[value="certo"]:checked').length;
-            document.getElementById("quiz-result").innerText = `Você acertou ${correct} de 10 questões!`;
-        }
-    </script>
 
+        function updateNavigation() {
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage === totalPages;
+        }
+
+        function updateProgressBar() {
+            const progress = (currentPage / totalPages) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+        }
+
+        function showFeedback(element, message) {
+            const feedback = element.parentElement.querySelector('.feedback');
+            feedback.innerHTML = message;
+        }
+
+        updateNavigation();
+        updateProgressBar();
+    </script>
 </body>
 </html>
